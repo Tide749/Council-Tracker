@@ -131,6 +131,288 @@
             margin-top: 40px;
             border-top: 1px solid #ddd;
         }
+/* ============================================
+   RECENT VOTES PAGE STYLES
+   ============================================ */
+.votes-page h2 {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+.motions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+.motion-card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.motion-card:hover {
+  border-color: #0087dc;
+  box-shadow: 0 4px 12px rgba(0, 135, 220, 0.15);
+  transform: translateY(-2px);
+}
+
+.motion-card h3 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.motion-date {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0 0 1em 0;
+}
+
+.vote-tally {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+  justify-content: space-around;
+}
+
+.tally-item {
+  text-align: center;
+  padding: 0.75em;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.tally-item.for {
+  background-color: #e4f5e9;
+  color: #2e7d32;
+}
+
+.tally-item.against {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.tally-item.abstain {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.tally-item .number {
+  display: block;
+  font-size: 1.5em;
+}
+
+.tally-item .label {
+  display: block;
+  font-size: 0.8em;
+}
+
+.motion-result {
+  margin: 0;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.motion-result.passed {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+.motion-result.failed {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
+
+/* ============================================
+   MOTION DETAIL PAGE STYLES
+   ============================================ */
+.motion-detail-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.back-button {
+  background: #0087dc;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background: #006aad;
+}
+
+.motion-header h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 2em;
+}
+
+.motion-header .motion-date {
+  color: #666;
+  margin: 0;
+}
+
+.motion-info {
+  background: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 8px;
+  margin: 1.5em 0;
+}
+
+.motion-info .summary {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0 0 1em 0;
+  color: #333;
+}
+
+.motion-info .details {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.results-summary {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 1.5em 0;
+}
+
+.results-summary h3 {
+  margin: 0 0 1em 0;
+}
+
+.result-badge {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.result-badge.passed {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+.result-badge.failed {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
+
+.vote-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.vote-stat {
+  text-align: center;
+  padding: 1em;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.vote-count {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.vote-count.for {
+  color: #2e7d32;
+}
+
+.vote-count.against {
+  color: #c62828;
+}
+
+.vote-count.abstain {
+  color: #6a1b9a;
+}
+
+.vote-label {
+  display: block;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.councillor-votes {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 1.5em 0;
+}
+
+.councillor-votes h3 {
+  margin: 0 0 1em 0;
+}
+
+.councillor-vote {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  padding: 0.75em;
+  border-bottom: 1px solid #eee;
+  gap: 1em;
+}
+
+.councillor-vote:last-child {
+  border-bottom: none;
+}
+
+.councillor-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.party-badge {
+  color: white;
+  padding: 0.4em 0.8em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.vote-badge {
+  padding: 0.4em 0.8em;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.vote-badge.for {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.vote-badge.against {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.vote-badge.abstain {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
     </style>
 </head>
 <body>
@@ -164,33 +446,25 @@
     </div>
 
     <!-- VOTES PAGE -->
-    <div id="votes" class="page">
-        <h2>Recent Votes</h2>
-        <div id="votesList"></div>
-    </div>
+  <div id="votes" class="page">
+    <div id="votes-container"></div>
+</div>
 
 </div>
 
 <footer>
-    <p>&copy; 2026   NELincs 4 You   <3</p>
+    <p>&copy; 2026   NELincs 4 You   &hearts;</p>
 </footer>
 
 <script>
     // FAKE DATA - Replace with real data later
     const councillors = [
         { id: 1, name: "Marian Jervis", ward: "Croft Baker", party: "Labour" },
-        { id: 2, name: "Malcom Morland", ward: "Croft Baker", party: "Labour" },
+        { id: 2, name: "Malcolm Morland", ward: "Croft Baker", party: "Labour" },
         { id: 3, name: "Oliver Freeston", ward: "Croft Baker", party: "Reform" },
         { id: 4, name: "Stephen Beasant", ward: "East Marsh", party: "Lib-Dem" },
         { id: 5, name: "Nicola Aisthorpe", ward: "East Marsh", party: "Lib-Dem" },
         { id: 6, name: "Loyd Emmerson", ward: "East Marsh", party: "Lib-Dem" },
-    ];
-
-    const votes = [
-        { id: 1, councillor: "John Smith", decision: "For", topic: "New Park Development", date: "2026-07-20" },
-        { id: 2, councillor: "Jane Doe", decision: "Against", topic: "New Park Development", date: "2026-07-20" },
-        { id: 3, councillor: "Mike Johnson", decision: "For", topic: "Council Tax Increase", date: "2026-07-15" },
-        { id: 4, councillor: "Sarah Williams", decision: "Against", topic: "Council Tax Increase", date: "2026-07-15" },
     ];
 
     // Show/hide pages
@@ -200,11 +474,13 @@
         document.getElementById(pageName).classList.add('active');
         
         if (pageName === 'councillors') {
-            displayCouncillors(councillors);
-        } else if (pageName === 'votes') {
-            displayVotes(votes);
-        }
-    }
+    displayCouncillors(councillors);
+} else if (pageName === 'votes') {
+    currentView = "recent-votes";
+    selectedMotionId = null;
+    render();
+     }
+     }
 
     // Display councillors
     function displayCouncillors(list) {
@@ -218,20 +494,6 @@
             </div>
         `).join('');
         document.getElementById('councillorsList').innerHTML = html;
-    }
-
-    // Display votes
-    function displayVotes(list) {
-        const html = list.map(v => `
-            <div class="councillor-card">
-                <div class="councillor-name">${v.topic}</div>
-                <div class="councillor-info">
-                    <strong>${v.councillor}</strong> voted <strong style="color: ${v.decision === 'For' ? 'green' : 'red'}">${v.decision}</strong><br>
-                    <small>${v.date}</small>
-                </div>
-            </div>
-        `).join('');
-        document.getElementById('votesList').innerHTML = html;
     }
 
     // Search functionality
@@ -264,6 +526,208 @@
 
     // Initialize
     displayCouncillors(councillors);
+
+// ============================================
+// DATA STRUCTURE
+// ============================================
+const motions = [
+  {
+    id: 1,
+    title: "Approval of Community Centre Budget",
+    date: "2026-07-15",
+    result: "Passed",
+    summary: "Proposal to allocate £500,000 to the community centre renovation project.",
+    details: "The motion sought approval for funding the renovation of the Dixon Woods Community Centre, including structural repairs, new facilities, and accessibility improvements.",
+    votes: {
+      for: 32,
+      against: 8,
+      abstain: 2
+    },
+    breakdown: [
+      { name: "Councillor Jane Smith", party: "Labour", vote: "For" },
+      { name: "Councillor Tom Brown", party: "Labour", vote: "For" },
+      { name: "Councillor Sarah Jones", party: "Conservative", vote: "Against" },
+      { name: "Councillor Mike Wilson", party: "Conservative", vote: "Against" },
+      { name: "Councillor Lee Chen", party: "Liberal Democrat", vote: "For" },
+      // Add more as needed
+    ]
+  },
+  {
+    id: 2,
+    title: "Green Infrastructure Initiative",
+    date: "2026-07-10",
+    result: "Passed",
+    summary: "Investment in green spaces and sustainable transport across the borough.",
+    details: "A comprehensive initiative to plant 5,000 trees, create new cycle paths, and upgrade bus infrastructure to reduce carbon emissions.",
+    votes: {
+      for: 28,
+      against: 12,
+      abstain: 2
+    },
+    breakdown: [
+      { name: "Councillor Amy Lee", party: "Labour", vote: "For" },
+      { name: "Councillor Robert Davis", party: "Conservative", vote: "Against" },
+      // Add more as needed
+    ]
+  },
+  {
+    id: 3,
+    title: "Council Tax Freeze",
+    date: "2026-07-05",
+    result: "Failed",
+    summary: "Proposal to freeze council tax rates for the next financial year.",
+    details: "Motion to maintain council tax at current levels, arguing residents face sufficient financial pressure. Budget impact assessment included.",
+    votes: {
+      for: 18,
+      against: 22,
+      abstain: 2
+    },
+    breakdown: [
+      { name: "Councillor Peter Graham", party: "Conservative", vote: "For" },
+      { name: "Councillor Linda Thompson", party: "Labour", vote: "Against" },
+      // Add more as needed
+    ]
+  }
+];
+
+// Party colors
+const partyColors = {
+  "Labour": "#e4003b",
+  "Conservative": "#0087dc",
+  "Reform": "#00ffff",
+  "Liberal Democrat": "#faa61a",
+  "Independent": "#999"
+};
+
+// ============================================
+// ROUTING & VIEW MANAGEMENT
+// ============================================
+let currentView = "recent-votes";
+let selectedMotionId = null;
+
+function navigateToMotion(motionId) {
+  currentView = "motion-detail";
+  selectedMotionId = motionId;
+  render();
+}
+
+function navigateBackToVotes() {
+  currentView = "recent-votes";
+  selectedMotionId = null;
+  render();
+}
+
+// ============================================
+// RECENT VOTES PAGE
+// ============================================
+function renderRecentVotes() {
+  const votesHTML = motions.map(motion => `
+    <div class="motion-card" onclick="navigateToMotion(${motion.id})">
+      <h3>${motion.title}</h3>
+      <p class="motion-date">${new Date(motion.date).toLocaleDateString()}</p>
+      <div class="vote-tally">
+        <div class="tally-item for">
+          <span class="number">${motion.votes.for}</span>
+          <span class="label">For</span>
+        </div>
+        <div class="tally-item against">
+          <span class="number">${motion.votes.against}</span>
+          <span class="label">Against</span>
+        </div>
+        <div class="tally-item abstain">
+          <span class="number">${motion.votes.abstain}</span>
+          <span class="label">Abstain</span>
+        </div>
+      </div>
+      <p class="motion-result ${motion.result.toLowerCase()}">${motion.result}</p>
+    </div>
+  `).join('');
+
+  return `
+    <div class="votes-page">
+      <h2>Recent Votes</h2>
+      <div class="motions-grid">
+        ${votesHTML}
+      </div>
+    </div>
+  `;
+}
+
+// ============================================
+// MOTION DETAIL PAGE
+// ============================================
+function renderMotionDetail() {
+  const motion = motions.find(m => m.id === selectedMotionId);
+  if (!motion) return "Motion not found";
+
+  const breakdownHTML = motion.breakdown.map(vote => `
+    <div class="councillor-vote">
+      <span class="councillor-name">${vote.name}</span>
+      <span class="party-badge" style="background-color: ${partyColors[vote.party]}">${vote.party}</span>
+      <span class="vote-badge ${vote.vote.toLowerCase()}">${vote.vote}</span>
+    </div>
+  `).join('');
+
+  return `
+    <div class="motion-detail-page">
+      <button class="back-button" onclick="navigateBackToVotes()">← Back to Votes</button>
+      
+      <div class="motion-header">
+        <h2>${motion.title}</h2>
+        <p class="motion-date">${new Date(motion.date).toLocaleDateString()}</p>
+      </div>
+
+      <div class="motion-info">
+        <p class="summary">${motion.summary}</p>
+        <p class="details">${motion.details}</p>
+      </div>
+
+      <div class="results-summary">
+        <h3>Results</h3>
+        <p class="result-badge ${motion.result.toLowerCase()}">${motion.result}</p>
+        <div class="vote-breakdown">
+          <div class="vote-stat">
+            <span class="vote-count for">${motion.votes.for}</span>
+            <span class="vote-label">Voted For</span>
+          </div>
+          <div class="vote-stat">
+            <span class="vote-count against">${motion.votes.against}</span>
+            <span class="vote-label">Voted Against</span>
+          </div>
+          <div class="vote-stat">
+            <span class="vote-count abstain">${motion.votes.abstain}</span>
+            <span class="vote-label">Abstained</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="councillor-votes">
+        <h3>How Each Councillor Voted</h3>
+        ${breakdownHTML}
+      </div>
+    </div>
+  `;
+}
+
+// ============================================
+// RENDER LOGIC
+// ============================================
+function render() {
+  const container = document.getElementById('votes-container');
+  let html;
+
+  if (currentView === "recent-votes") {
+    html = renderRecentVotes();
+  } else if (currentView === "motion-detail") {
+    html = renderMotionDetail();
+  }
+
+  container.innerHTML = html;
+}
+
+// Initial render
+render();
+
 </script>
 
 </body>
