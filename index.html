@@ -533,15 +533,15 @@
 const motions = [
   {
     id: 1,
-    title: "Approval of Community Centre Budget",
+    title: "Election of Oliver Freeston as Council Leader",
     date: "2026-07-15",
     result: "Passed",
-    summary: "Proposal to allocate £500,000 to the community centre renovation project.",
-    details: "The motion sought approval for funding the renovation of the Dixon Woods Community Centre, including structural repairs, new facilities, and accessibility improvements.",
+    summary: "Proposal to:<br>1. Remove Phillip Jackson (Conservative) as council leader.<br>2. Appoint Oliver Freeston (Reform) as council leader.",
+    details: "'The Council considered a Notice of Motion, proposed by Councillor Freeston and seconded by Councillor Grice, submitted in accordance with the Council’s Standing Orders and Section 9IA of the Local Government Act 2000, as set out below: This Council notes: <br> 1. That under section 9IA of the Local Government Act 2000, the Council may remove the Leader of the Council by resolution of Full Council; <br> 2. That the Leader of the Council holds responsibility for the discharge of executive functions and political leadership of the authority; <br> 3. That it is the responsibility of Full Council to ensure that the authority continues to operate with effective leadership, accountability and confidence.This Council therefore resolves: <br> 1. To remove Councillor Philip Jackson from the position of Leader of North East Lincolnshire Council with immediate effect pursuant to section 9IA of the Local Government Act 2000 and the Council’s Constitution. <br> 2. To appoint Councillor Oliver Freeston as Leader of North East Lincolnshire Council with immediate effect, to hold office in accordance with the provisions of the Local Government Act 2000 and the Council’s Constitution.'",
     votes: {
-      for: 32,
-      against: 8,
-      abstain: 2
+      for: 17,
+      against: 9,
+      abstain: 13
     },
     breakdown: [
       { name: "Councillor Jane Smith", party: "Labour", vote: "For" },
@@ -630,13 +630,13 @@ function renderRecentVotes() {
           <span class="number">${motion.votes.for}</span>
           <span class="label">For</span>
         </div>
+         <div class="tally-item abstain">
+          <span class="number">${motion.votes.abstain}</span>
+          <span class="label">Abstain</span>
+        </div>
         <div class="tally-item against">
           <span class="number">${motion.votes.against}</span>
           <span class="label">Against</span>
-        </div>
-        <div class="tally-item abstain">
-          <span class="number">${motion.votes.abstain}</span>
-          <span class="label">Abstain</span>
         </div>
       </div>
       <p class="motion-result ${motion.result.toLowerCase()}">${motion.result}</p>
@@ -690,13 +690,13 @@ function renderMotionDetail() {
             <span class="vote-count for">${motion.votes.for}</span>
             <span class="vote-label">Voted For</span>
           </div>
-          <div class="vote-stat">
-            <span class="vote-count against">${motion.votes.against}</span>
-            <span class="vote-label">Voted Against</span>
-          </div>
-          <div class="vote-stat">
+           <div class="vote-stat">
             <span class="vote-count abstain">${motion.votes.abstain}</span>
-            <span class="vote-label">Abstained</span>
+             <span class="vote-label">Abstained</span>
+          </div>
+            <div class="vote-stat">
+             <span class="vote-count against">${motion.votes.against}</span>
+            <span class="vote-label">Voted Against</span>
           </div>
         </div>
       </div>
